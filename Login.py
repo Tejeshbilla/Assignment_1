@@ -43,7 +43,7 @@ def pwd_validate(pwd):
 
 
 def login():
-    file1 = open('userr_name_password.txt', 'r')
+    file1 = open('user_Login_details.txt', 'r')
     test = list(map(str, file1.read().split('\n')))
     file1.close()
     #print(test)
@@ -79,7 +79,7 @@ def login():
         upstring.append(i + '\n')
     if bool(valid):
         if bool(up_req):
-            file1 = open('userr_name_password.txt', 'w+')
+            file1 = open('user_Login_details.txt', 'w+')
             file1.writelines(upstring)
             file1.close()
     else:
@@ -91,7 +91,7 @@ def login():
 
 
 def register():
-    file1 = open('userr_name_password.txt', 'a+')
+    file1 = open('user_Login_details.txt', 'a+')
 
     u_name = input('Please enter your emailid: ')
     pwd = input('\nPlease enter your new password\bPassword must contain 1 uppercase letter \n1 lowercase letter \n1 digit\nThe password must have atleaset 5 cahreccter and max of 16 charecters')
